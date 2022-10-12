@@ -28,7 +28,7 @@ resource "null_resource" "ansible" {
   provisioner "remote-exec" {
     inline = [
       "git clone https://github.com/devopsravi9/roboshop-ansible.git",
-      "cd ansible",
+      "cd /home/centos/roboshop-ansible/ansible",
       "ansible-playbook robo.yml -e HOST=localhost -e ROLE=rabbitmq -e ENV=${var.ENV}",
     ]
   }

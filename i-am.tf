@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "read-only-secret" {
-  name        = "allow-read-only-secret"
+  name        = "rabbitmq-allow-read-only-secret"
   path        = "/"
   description = "allow-read-only-secret"
 
