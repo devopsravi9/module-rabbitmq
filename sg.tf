@@ -11,6 +11,14 @@ resource "aws_security_group" "main" {
     cidr_blocks      = var.PRIVATE_SUBNET_CIDR
   }
 
+  ingress {
+    description      = "workstation"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "SSH"
+    cidr_blocks      = var.WORKSTATION_IP
+  }
+
   egress {
     from_port        = 0
     to_port          = 0
