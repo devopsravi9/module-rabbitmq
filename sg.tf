@@ -15,7 +15,7 @@ resource "aws_security_group" "main" {
     description      = "workstation"
     from_port        = 22
     to_port          = 22
-    protocol         = "SSH"
+    protocol         = "TCP"
     cidr_blocks      = var.WORKSTATION_IP
   }
 
